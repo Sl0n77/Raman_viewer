@@ -1,25 +1,25 @@
 # Raman Viewer
 
-Интерактивное веб-приложение для просмотра и предварительной обработки рамановских спектров (Streamlit + Plotly).
+An interactive web application for viewing and preprocessing Raman spectra (Streamlit + Plotly).
 
-## Возможности
-- Загрузка спектров (`.txt`, `.csv`, `.esp`), автоопределение разделителей/десятичного знака
-- Интерактивная визуализация (масштабирование колёсиком мыши, панорамирование)
-- Предобработка:
-  - обрезка по диапазону см⁻¹
-  - ресэмплинг на равномерную сетку
-  - сглаживание (Savitzky–Golay)
-  - удаление базовой линии (AsLS)
-  - нормализация (max, area, vector)
-- Детекция пиков (`scipy.signal.find_peaks`)
-- Экспорт обработанных данных (CSV / ZIP)
-- Сохранение и загрузка настроек (JSON)
+## Features
+- Load spectra (`.txt`, `.csv`, `.esp`), automatic delimiter/decimal detection
+- Interactive visualization (mouse wheel zoom, pan, modebar buttons)
+- Preprocessing:
+  - cropping by Raman shift range (cm⁻¹)
+  - resampling to a uniform grid
+  - smoothing (Savitzky–Golay)
+  - baseline correction (AsLS)
+  - normalization (max, area, vector)
+- Peak detection (`scipy.signal.find_peaks`)
+- Export processed spectra (CSV / ZIP)
+- Save/Load settings (JSON)
 
 ---
 
-## Запуск через Docker
+## Run with Docker
 
-1. Установите [Docker](https://docs.docker.com/get-docker/).
-2. Подтяните готовый образ из GitHub Container Registry:
+1. Install [Docker](https://docs.docker.com/get-docker/).
+2. Pull the prebuilt image from GitHub Container Registry:
    ```bash
    docker pull ghcr.io/sl0n77/raman_viewer:latest
