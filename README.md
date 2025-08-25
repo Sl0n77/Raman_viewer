@@ -16,6 +16,18 @@ An interactive web application for viewing and preprocessing Raman spectra (Stre
 - Save/Load settings (JSON)
 
 ---
+Build locally:
+docker build -t raman_viewer ./Raman_viewer
+docker run --rm -p 8501:8501 raman_viewer
+
+Run locally (Python)
+cd Raman_viewer
+python -m venv .venv
+.\.venv\Scripts\activate   # Windows
+source .venv/bin/activate  # Linux / macOS
+pip install -r requirements.txt
+streamlit run app.py
+
 
 ## Run with Docker
 
@@ -23,3 +35,7 @@ An interactive web application for viewing and preprocessing Raman spectra (Stre
 2. Pull the prebuilt image from GitHub Container Registry:
    ```bash
    docker pull ghcr.io/sl0n77/raman_viewer:latest
+
+## License
+
+MIT License
